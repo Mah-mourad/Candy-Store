@@ -1,0 +1,250 @@
+body{
+    background-color: rgb(249, 128, 128);
+    font-family: "Wittgenstein", sans-serif ;
+}
+.navbar{
+    background-color: #FFF5E6;
+}
+.navbar .nav-link,
+.navbar .icons,
+.copy-right .rights{
+    color: #D2691E;
+    transition: all .4s ease;
+}
+.navbar .nav-link:hover,
+.navbar .icons:hover,
+.copy-right .rights:hover{
+    color: #fff;
+}
+.navbar-brand{
+    font-size: 30px;
+    color: #D2691E;
+}
+.cake{
+    color: #D2691E;
+}
+a{
+    text-decoration: none;
+}
+.navbar .navbar-toggler{
+    color: #D2691E;
+    font-size: 25px;
+    border-color: #D2691E;
+}
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+.facebook{
+    background-color: #1877f2;
+}
+.instagram{
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+.linkedin{
+    background-color: #0077b5;
+}
+.jumbotron{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 60vh;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.8;
+}
+.jumbotron-about h1{
+    font-size: 60px;
+}
+.jumbotron .fit{
+    width: 462px;
+    color: rgb(255, 255, 255,.8);
+    border-right: 2px solid rgb(255, 255, 255,.8);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: control-width 3s steps(22) 2s both, blink .5s infinite;
+}
+@keyframes control-width {
+    from{
+        width: 0;
+    }
+    to{
+        width: 462px;
+    }
+}
+@keyframes blink {
+    from{
+        border-right-color:rgb(255, 255, 255,.8);
+    }
+    to{
+        border-right-color:transparent;
+    }
+}
+@media (max-width:992px) {
+    .jumbotron .fit{
+        width: 450px;
+        animation: control-width 3s steps(22) 2s both, blink .5s infinite;
+    }
+    @keyframes control-width {
+        from{
+            width: 0;
+        }
+        to{
+            width: 450px;
+        }
+    }
+}
+@media (max-width:768px) {
+    .jumbotron .fit{
+        width: 400px;
+        animation: control-width 3s steps(22) 2s both, blink .5s infinite;
+    }
+    @keyframes control-width {
+        from{
+            width: 0;
+        }
+        to{
+            width: 400px;
+        }
+    }
+}
+.thumbnail img{
+    border-radius: 8px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+.thumbnail img:hover{
+    opacity: .6;
+}
+.links{
+    background-color: rgb(24, 24, 24);
+}
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info .image{
+     height: 500px;
+     width: 450px;
+}
+.Testimonials .line{
+    display: inline-block;
+    width: 120px;
+    height: 2px;
+}
+.serv .box svg{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(195, 50, 31);
+    color: rgb(232, 227, 227);
+    transition: all .7s ease;
+}
+.serv .box{
+    position: relative;
+    overflow: hidden;
+}
+.serv .box::before{
+    content: "";
+    position: absolute;
+    background-color: rgb(195, 31, 31,.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    transition: all .7s ease;
+    transform: translate(-23px,-23px);
+    transform: translate(123%,123%);
+}
+.serv .box:hover::before{
+    transform: translate(-23px,-23px);
+}
+.serv .box:hover svg{
+    background-color: rgb(232, 227, 227);
+    color: rgb(195, 50, 31);
+}
+.cont .box svg{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    transition: all .5s ease;
+    border: 1px solid rgb(195, 50, 31);
+    color: rgb(195, 31, 31);
+}
+.cont .box:hover svg{
+background-color: rgb(195, 31, 31);
+color: rgb(232, 227, 227);
+}
+form .form-control{
+    outline: none;
+    border: none;
+}
+form .form-control::placeholder{
+color: rgb(175, 175, 175);
+}
+form .form-control:focus{
+    outline: rgb(31, 195, 135);
+    border: rgb(31, 195, 135);
+}
+.caard{
+    height: 410px;
+    background-color: #ffadad ;
+    border-radius: 15px;
+}
+.thecard{
+position: absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all .6s ease;
+}
+.thecard:hover{
+    transform: rotateY(180deg);
+}
+.front{
+    position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+}
+.back{
+    position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+}
+.front img,
+.back img{
+    width: 18rem;
+    height: 250px;
+}
+.image{
+border-radius: 15px;
+}
+.cake .cards .card,
+.donat .cards .card,
+.candy .cards .card{
+    background-color: #ffadad;
+    transition: all .5s ease;
+}
+.cake .cards .card:hover{
+    transform: scale(1.1);
+}
+.donat .cards .card:hover{
+    transform: rotateX(25deg);
+}
+.candy .cards .card:hover{
+    transform: translateY(-12px);
+}
+.copy-right{
+    background-color: #fadfb9;
+}
+@media (max-width:500px) {
+    .cake{
+        display: flex;
+        justify-content: center;
+    }
+}
